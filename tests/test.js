@@ -9,15 +9,21 @@ describe('initialize', function () {
 });
 
 describe('page views', function () {
-  it('should register an event', function (done){
-    GA.pageView('some title', 'some page', done);
-    
+  it('should register a page view', function (done){
+    GA.trackPage('some title', 'some page', function (err, resp) {
+      resp.statusCode.should.eql(200);
+      done();
+    });
   });
 
 });
 
 describe('events', function() {
   it('should register an event', function (done) {
-    GA.event('test event', 'boom', done);
+    GA.trackEvent('test event', 'boom', function (err, resp) {
+      resp.statusCode.should.eql(200);
+      done();
+    });
   });
 });
+
