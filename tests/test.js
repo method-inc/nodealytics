@@ -1,10 +1,23 @@
-var GA = require("../lib/googalytics.js");
+var GA = require("../lib/main.js");
 var should = require("should");
-var assert = require("assert");
 
 describe('initialize', function () {
-  it('should connect', function (done) {
-    GA.initialize('UA-33709401-1', '', done);
+  it('should require an account ID', function (done) {
+    GA.initialize('', '', function (err, resp) {
+      err.message.should.eql('Account ID is invalid');
+      done();
+    });
+  });
+
+  it('should require a domain', function (done) {
+    GA.initialize('UA-12345678-1', '', function (err, resp) {
+      err.message.should.eql('Domain is invalid');
+      done();
+    });
+  });
+
+  it('should initialize with the appropriate parameters', function (done) {
+    GA.initialize('UA-33709401-1', 'testsite.com', done);
   });
 });
 
