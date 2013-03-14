@@ -1,6 +1,7 @@
 v0.0.4 / 2013-03-13
 --------------------
 
+* Remove underscore dependency
 * Improved Google Analytics UA id string validation
 * Make callback argument to `runQuery` function optional
 
