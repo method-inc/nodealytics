@@ -1,7 +1,6 @@
-v0.0.3 / 2013-01-02
+v0.0.4 / 2013-03-13
 --------------------
 
-* Make callback arguments optional
-
-
+* Improved Google Analytics UA id string validation
+* Make callback argument to `runQuery` function optional
 
