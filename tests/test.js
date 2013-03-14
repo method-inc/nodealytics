@@ -42,12 +42,26 @@ describe('page views', function () {
 
 });
 
-describe('events', function() {
+describe('events', function () {
   it('should register an event', function (done) {
     NA.trackEvent('test event', 'boom', function (err, resp) {
       resp.statusCode.should.eql(200);
       done();
     });
+  });
+});
+
+describe('mapParams()', function () {
+  it('should stringify params correctly', function () {
+    var params = {
+      'param1': 'valueA',
+      'param2': 'valueB',
+      'param3': 'valueC'
+    }
+    var result = NA.mapParams(params);
+    var expected = 'param1=valueA&param2=valueB&param3=valueC';
+
+    result.should.eql(expected);
   });
 });
 
