@@ -40,6 +40,13 @@ describe('page views', function () {
     });
   });
 
+  it('should register a page view with custom gif params', function (done){
+    NA.trackPage('some title', 'some page', {utmr: 'http://github.com'}, function (err, resp) {
+      resp.statusCode.should.eql(200);
+      resp.request.path.should.match(/&utmr=http:\/\/github.com/);
+      done();
+    });
+  });
 });
 
 describe('events', function () {
