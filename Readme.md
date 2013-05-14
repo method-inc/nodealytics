@@ -25,7 +25,7 @@ NA.initialize('UA-12345678-1', 'someplace.com', function () {
 ```javascript
 NA.trackPage('Page Title', '/page/path', function (err, resp) {
   if (!err && resp.statusCode === 200) {
-    console.log('it worked!');
+    console.log('Page has been tracked with Google Analytics');
   }
 });
 ```
@@ -35,7 +35,7 @@ NA.trackPage('Page Title', '/page/path', function (err, resp) {
 ```javascript
 NA.trackPage('Page Title', '/page/path', {utmr:"http://www.google.com"}, function (err, resp) {
   if (!err && resp.statusCode === 200) {
-    console.log('it worked!');
+    console.log('Page has been tracked with Google Analytics');
   }
 });
 ```
@@ -45,7 +45,7 @@ NA.trackPage('Page Title', '/page/path', {utmr:"http://www.google.com"}, functio
 ```javascript
 NA.trackEvent('test event', 'boom', function (err, resp) {
   if (!err && resp.statusCode === 200) {
-    console.log('it worked!');
+    console.log('Event has been tracked with Google Analytics');
   }
 });
 ```
