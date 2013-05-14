@@ -11,7 +11,7 @@ Heavily influenced by the Gabba project from the guys at the Hybrid Group (http:
 `npm install nodealytics`
 
 ```javascript
-//INITIALIZE
+// initialize
 var NA = require("nodealytics");
 NA.initialize('UA-12345678-1', 'someplace.com', function () {
   //MORE GOOGLE ANALYTICS CODE HERE
@@ -23,8 +23,8 @@ NA.initialize('UA-12345678-1', 'someplace.com', function () {
 ### Track Page
 
 ```javascript
-NA.trackPage('page title', 'pageName', function (err, resp) {
-  if (!err, resp.statusCode === 200) {
+NA.trackPage('Page Title', '/page/path', function (err, resp) {
+  if (!err && resp.statusCode === 200) {
     console.log('it worked!');
   }
 });
@@ -33,8 +33,8 @@ NA.trackPage('page title', 'pageName', function (err, resp) {
 ### Track Page with Referal
 
 ```javascript
-NA.trackPage('page title', 'pageName', {utmr:"http://www.google.com"} function (err, resp) {
-  if (!err, resp.statusCode === 200) {
+NA.trackPage('Page Title', '/page/path', {utmr:"http://www.google.com"}, function (err, resp) {
+  if (!err && resp.statusCode === 200) {
     console.log('it worked!');
   }
 });
@@ -44,7 +44,7 @@ NA.trackPage('page title', 'pageName', {utmr:"http://www.google.com"} function (
 
 ```javascript
 NA.trackEvent('test event', 'boom', function (err, resp) {
-  if (!err, resp.statusCode === 200) {
+  if (!err && resp.statusCode === 200) {
     console.log('it worked!');
   }
 });
