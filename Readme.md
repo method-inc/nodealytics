@@ -26,7 +26,7 @@ var NA = require("nodealytics");
 NA.initialize('UA-xxxx', 'yourdomain.com');
 
 app.get('/page', function(req, res) {
-  NA.TrackPage('Page Title', '/page');
+  NA.trackPage('Page Title', '/page');
 });
 ```
 ## Examples
