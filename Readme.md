@@ -18,6 +18,16 @@ NA.initialize('UA-12345678-1', 'someplace.com', function () {
 });
 ```
 
+###Using it with express.js
+var express = require('express');
+var app = express();
+var NA = require("nodealytics");
+NA.initialize('UA-xxxx', 'yourdomain.com');
+
+app.get('/page', function(req, res) {
+  NA.TrackPage('Page Title', '/page');
+});
+
 ## Examples
 
 ### Track Page
