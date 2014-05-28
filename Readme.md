@@ -50,6 +50,13 @@ NA.trackEvent('test event', 'boom', function (err, resp) {
 });
 ```
 
+### Set Proxy
+
+```javascript
+NA.setProxy('http://your.proxy.com', 'title', function (err, resp) {
+  NA.trackEvent(...);
+});
+```
 
 ### What do those variables mean?!
 
