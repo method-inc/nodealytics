@@ -2,7 +2,7 @@
   "author": "Raquel Velez <raquel@skookum.com> (http://skookum.com)",
   "name": "nodealytics",
   "description": "Google Analytics API for Node projects",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "repository": {
     "type": "git",
     "url": "git://github.com/skookum/nodealytics.git"
